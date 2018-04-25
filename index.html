@@ -1,195 +1,167 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Fontdiner+Swanky|Fredericka+the+Great|Londrina+Outline|Monoton" rel="stylesheet">      <script src="jquery-3.3.1.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <meta name="viewport" content="width=device-width,initial-scale=1.0">
-      <a href="about.html" class="myButton"> about </a>
-      <a href="https://www.facebook.com/SeoniClothing/" class="fa fa-facebook"></a>
-      <a href="https://www.instagram.com/seoniclothing_wellingborough/?hl=en" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-snapchat-ghost"></a>
+<head>
+  <title>Seoni Clothing</title>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Fontdiner+Swanky|Fredericka+the+Great|Londrina+Outline|Monoton" rel="stylesheet">      <script src="jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <a href="about.html" class="myButton"> about </a>
+  <a href="https://www.facebook.com/SeoniClothing/" class="fa fa-facebook"></a>
+  <a href="https://www.instagram.com/seoniclothing_wellingborough/?hl=en" class="fa fa-instagram"></a>
+  <a href="#" class="fa fa-snapchat-ghost"></a>
+
+  <input id="input" type="text">
+  <button id="button">search</button>
+
+  <style>
+  WebContainer{
+    width: 100%;
+    height: auto;
+  }
+  articles{
+    width:90%;
+    height: auto;
+    margin: auto;
+  }
+
+  .myButton {
+    -moz-box-shadow: 0px 1px 0px 0px #fff6af;
+    -webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+    background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+    background-color:#ffec64;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #ffaa22;
+    display:inline-block;
+    cursor:pointer;
+    color:#333333;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffee66;
+  }
+  .myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+    background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+    background-color:#ffab23;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+
+  .fa {
+    padding: 8px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    position: relative;
+    top: 15px;
+    right: -706px;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  h1 {
+    @import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Fontdiner+Swanky|Fredericka+the+Great|Londrina+Outline|Monoton');
+    font-family: 'Monoton', cursive;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .container1 {
+    height: 400px;
+    max-width: 700px;
+    background: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t35.18174-12/30771853_10156584725603949_2032731687_o.jpg?_nc_cat=0&oh=895bff41f06ca86d2975da7adea8680e&oe=5AE1D264");
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 0px;
+
+  }
+  .container2 {
+    background: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t35.18174-12/31028295_10156584724833949_938593853_o.jpg?_nc_cat=0&oh=9e5282b7ca4a14855be09d25da85ce4b&oe=5AE2AE42");
+    height: 400px;
+    max-width: 1000px;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 0px;
+
+  }
+
+  .container3 {
+    background: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t34.18173-12/30777126_10156584724418949_926634698_n.jpg?_nc_cat=0&oh=c21186a6c10f3c996f2d5be446fea476&oe=5AE2C909");
+    height: 400px;
+    width: 700px;
+    margin: 0 auto;
+    margin-top:30px;
+    margin-bottom:20px;
+
+  }
+
+  p {
+    color: rgba(0,0,0,1);
+    background: rgba(0,0,0,0);
+    padding: 10px;
+    font-family: helvetica, sans-serif;
+    display: center;
+    line-height: 28px;
+    position: justify;
+    bottom: 0;
+    margin: 0;
+  }
+  </style>
 
 
+</head>
 
-      <input id="input" type="text">
-      <button id="button">search</button>
-      <ul id="list">  </ul>
+<body>
+  <h1> Seoni Clothing </h1>
+  <div id="page-wrap">
+    <div class="container">
+      <div class='jumbotron'>
+        <div class="container1">
+        </div>
 
+        <div class="container2">
+        </div>
 
-      <style>
-        #page-wrap {
-                    width: 800px;
-                    margin: 0 auto;
-                    background: grey
-                    }
-                    WebContainer{
-                width: 100%;
-                height: auto;
-                    }
-            articles{
-                width:90%; /*Takes 90% width from WebContainer*/
-                height: auto;
-                margin: auto;
-                      }
+        <div class="container3">
+        </div>
+      </div>
+    </div>
+  </div>
 
-                    .myButton {
-                    	-moz-box-shadow: 0px 1px 0px 0px #fff6af;
-                    	-webkit-box-shadow: 0px 1px 0px 0px #fff6af;
-                    	box-shadow: 0px 1px 0px 0px #fff6af;
-                    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
-                    	background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-                    	background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-                    	background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-                    	background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-                    	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-                    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
-                    	background-color:#ffec64;
-                    	-moz-border-radius:6px;
-                    	-webkit-border-radius:6px;
-                    	border-radius:6px;
-                    	border:1px solid #ffaa22;
-                    	display:inline-block;
-                    	cursor:pointer;
-                    	color:#333333;
-                    	font-family:Arial;
-                    	font-size:15px;
-                    	font-weight:bold;
-                    	padding:6px 24px;
-                    	text-decoration:none;
-                    	text-shadow:0px 1px 0px #ffee66;
-                    }
-                    .myButton:hover {
-                    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
-                    	background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                    	background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                    	background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                    	background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                    	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-                    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
-                    	background-color:#ffab23;
-                    }
-                    .myButton:active {
-                    	position:relative;
-                    	top:1px;
-                    }
-
-                    .fa {
-                      padding: 8px;
-                      font-size: 20px;
-                      width: 20px;
-                      text-align: center;
-                      text-decoration: none;
-                      border-radius: 50%;
-                      position: relative;
-                      top: 15px;
-                      right: -706px;
-                          }
-                    .fa:hover {
-                        opacity: 0.7;
-                            }
-                    .fa-facebook {
-                        background: #3B5998;
-                        color: white;
-                            }
-                    .fa-instagram {
-                        background: #125688;
-                        color: white;
-                            }
-                    .fa-snapchat-ghost {
-                        background: #fffc00;
-                        color: white;
-                        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                            }
-
-
-      h1 {
-      @import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Fontdiner+Swanky|Fredericka+the+Great|Londrina+Outline|Monoton');
-          font-family: 'Monoton', cursive;
-          font-size: 60px;
-          }
-
-
-      body {
-        font-family: helvetica, sans-serif;
-        margin: auto;
-        max-width: 600px
-            }
-
-      div {
-      }
-
-          .container1 {
-            height: 400px;
-            width: 700px;
-            background: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t35.18174-12/30771853_10156584725603949_2032731687_o.jpg?_nc_cat=0&oh=895bff41f06ca86d2975da7adea8680e&oe=5AE1D264");
-            background-size: cover;
-            position: relative;
-            margin: auto;
-            border-radius: 0px;
-            left: 30px;
-
-          }
-          .container2 {
-            background: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t35.18174-12/31028295_10156584724833949_938593853_o.jpg?_nc_cat=0&oh=9e5282b7ca4a14855be09d25da85ce4b&oe=5AE2AE42");
-            height: 400px;
-            width: 1000px;
-            background-size: cover;
-            position: relative;
-            margin: auto;
-            border-radius: 0px;
-            left: -120px;
-          }
-
-          .container3 {
-            background: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t34.18173-12/30777126_10156584724418949_926634698_n.jpg?_nc_cat=0&oh=c21186a6c10f3c996f2d5be446fea476&oe=5AE2C909");
-            height: 400px;
-            width: 700px;
-            margin-top:20px;
-            margin-bottom:20px;
-            background-size: cover;
-            position: relative;
-            left: 30px;
-          }
-
-          p {
-            color: rgba(0,0,0,1);
-            background: rgba(0,0,0,0);
-            padding: 10px;
-            font-family: helvetica, sans-serif;
-            display: center;
-            line-height: 28px;
-            position: justify;
-            bottom: 0;
-            margin: 0;
-          }
-
-      body {
-        font-family: helvetica, sans-serif;
-        margin: 0 auto;
-        max-width: 600px;
-      }
-      </style>
-
-      <h1> Seoni Clothing </h1>
-
-      <title>Seoni Clothing</title>
-    </head>
-
-    <body>
-      <div class="container">
-        <div class='jumbotron'>
-                <div class="container1">
-                </div>
-
-                <div class="container2">
-                </div>
-
-                <div class="container3">
-                </div>
-              </div>
-
-      <script type="text/javascript">
-      </script>
-      </body>
+</body>
 
 </html>
