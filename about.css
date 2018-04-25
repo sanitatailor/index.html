@@ -1,0 +1,12 @@
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 50px;
+}
+
+.picture {
+  padding-bottom: 30px;
+}
+
+.jumbotron {
+  background-color: white;
+}
